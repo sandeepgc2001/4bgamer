@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="assets/favicon.png" type="media/4btop.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4B GAMER OFFICIAL</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <nav>
+        <a href="#" class="logo">
+            <box-icon name='game' type='solid' color='#00FFFF' ></box-icon>4B<span>Gamers</span>
+        </a>
+        <div class="menuToggle" onclick="toggleMenu()">
+        </div>
+        <ul class="navigation">
+            <li><a href="#banner" onclick="toggleMenu()">Home</a></li>
+            <li><a href="#about" onclick="toggleMenu()">About</a></li>
+            <li><a href="#games" onclick="toggleMenu()">Game</a></li>
+            <li><a href="#merchandise" onclick="toggleMenu()">Merchandise</a></li>
+            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+
+        </ul>
+    </nav>
+    <section class="banner" id="banner">
+        <div class="content">
+            <h2>
+                🎮 “Welcome to 4B Gamers Official – Your ultimate hub for gaming, streams, and entertainment.”
+            </h2>
+            <p>“Came from Nepal to bring you non-stop gaming and entertainment – 4B Gamers Official.”</p>
+            <div id="section10" class="demo">
+                <a href="#about"><span></span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- about  -->
+    <section class="about" id="about">
+        <div class="row" data-aos="zoom-out-down">
+            <div class="col50">
+                <!-- <h2 class="title-text"><box-icon name='user-rectangle' type='solid' color='#00ffff' ></box-icon>About <span>Us</span></h2> -->
+                <h2 class="title-text"><lord-icon
+                    src="https://cdn.lordicon.com/nocovwne.json"
+                    trigger="loop"
+                    colors="primary:#00ffff,secondary:#ffffff"
+                    stroke="66"
+                    style="width: 50px;height: 50px;margin-top: -10px;">
+                </lord-icon>About <span>Us</span></h2>
+                <p>*"4B Gamers Official was founded by four brothers with one dream — to bring gaming entertainment to everyone. The name 4B stands for Four Brothers, a symbol of our bond, teamwork, and passion for gaming.
+
+From Nepal to the world, we create exciting content — from action-packed battles to fun streams and community vibes. Gaming isn’t just a hobby for us; it’s our way of connecting, sharing, and inspiring players everywhere.
+
+At 4B Gamers Official, we play together, laugh together, and grow together with our community. Join us on this journey and be part of the family where every game tells a story."*</p>
+            </div>
+            <div class="col50">
+                <div class="imgBx">
+                    <img src="media/4b.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ------ -->
+
+<!-- YouTube Section -->
+<section id="youtube" class="youtube">
+  <div class="title">
+    <h2 class="title-text"><span>🎬</span> Latest Videos</h2>
+    <p>Check out my newest uploads from YouTube!</p>
+  </div>
+  <div id="videos"></div>
+</section>
+<script>
+  // Replace with your API Key & Channel ID
+  const API_KEY = "AIzaSyBUF6hMZp9kHdNxw_rV50QGPOMGl7im-FM";
+  const CHANNEL_ID = "UCvCOoQHP3SQZAWVpcZKsTFQ";
+  const MAX_RESULTS = 6; // how many videos
+
+  async function loadVideos() {
+    try {
+      const response = await fetch(
+        `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${CHANNEL_ID}&part=snippet,id&order=date&maxResults=${MAX_RESULTS}`
+      );
+      const data = await response.json();
+      let videoContainer = document.getElementById("videos");
+
+      data.items.forEach(item => {
+        if (item.id.videoId) {
+          videoContainer.innerHTML += `
+            <div class="video-box" style="margin:20px auto;max-width:560px;">
+              <iframe width="100%" height="315"
+                src="https://www.youtube.com/embed/${item.id.videoId}"
+                frameborder="0" allowfullscreen>
+              </iframe>
+              <h3>${item.snippet.title}</h3>
+            </div>
+          `;
+        }
+      });
+    } catch (error) {
+      console.error("Error loading videos:", error);
+    }
+  }
+
+  loadVideos();
+</script>
+
+
+
+
+    <!-- ganes -->
+    <section id="games" class="game">
+        <div class="title">
+            <lord-icon
+                src="https://cdn.lordicon.com/ibgjiwvi.json"
+                trigger="loop"
+                colors="primary:#00ffff,secondary:#ffffff"
+                style="width: 50px;height: 50px;">
+            </lord-icon>
+            <h2 class="title-text"><span>G</span>ames</h2>
+            <p>At 4B Gamers Official, we dive into a variety of games to bring you the best entertainment and gameplay experiences. From intense battle royale matches to creative adventures, we play games that challenge, excite, and inspire our community.</p>
+        </div>
+        <div class="content">
+            <div class="box" data-aos="flip-left">
+                <div class="imgBx">
+                    <img src="media/games/bgmi.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3>Player Unknown Battleground (PUBG PC)</h3>
+                </div>
+            </div>
+            <div class="box" data-aos="flip-right">
+                <div class="imgBx">
+                    <img src="media/games/cod.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3>Call Of Duty:Mobile</h3>
+                </div>
+            </div>
+            <div class="box" data-aos="flip-left">
+                <div class="imgBx">
+                    <img src="media/games/minecraft.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3>GTAV ROLEPLAY (NERP)</h3>
+                </div>
+            </div>
+            <div class="box" data-aos="flip-right">
+                <div class="imgBx">
+                    <img src="media/games/lords.png" alt="">
+                </div>
+                <div class="text">
+                    <h3>Lords Mobile</h3>
+                </div>
+            </div>
+            <div class="box" data-aos="flip-left">
+                <div class="imgBx">
+                    <img src="media/games/pokemon.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3>Pokemob Unite</h3>
+                </div>
+            </div>
+            <div class="box" data-aos="flip-right">
+                <div class="imgBx">
+                    <img src="media/games/freefire.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3>Garena Free Fire</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <!-- ----- -->
+
+    <!-- merchandise  -->
+    <section class="merchandise" id="merchandise">
+        <div class="title">
+            <lord-icon
+                src="https://cdn.lordicon.com/ippkhukl.json"
+                trigger="loop"
+                colors="primary:#00ffff,secondary:#ffffff"
+                style="width: 50px;height: 50px;">
+            </lord-icon>
+            <h2 class="title-text">Gaming <span>Merchandise</span></h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam fugiat nemo qui.</p>
+        </div>
+        <div class="content">
+            <div class="box box-1" data-aos="zoom-out-down">
+                <div class="imgBx">
+                    <img src="media/merchandise/streak-hoodie.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3>Hoodies</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo neque debitis vel aut nam voluptatibus veniam quam deserunt dicta soluta?</p>
+                </div>
+                <a href="#" class="know">Know More</a>
+            </div>
+            <div class="box box-2" data-aos="zoom-out-down">
+                <div class="imgBx">
+                    <img src="media/merchandise/mask.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3>Mask</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo neque debitis vel aut nam voluptatibus veniam quam deserunt dicta soluta?</p>
+                </div>
+                <a href="#" class="know">Know More</a>
+            </div>
+            <div class="box box-3" data-aos="zoom-out-down">
+                <div class="imgBx">
+                    <img src="media/merchandise/mobile-collabs.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3>T-shirts</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo neque debitis vel aut nam voluptatibus veniam quam deserunt dicta soluta?</p>
+                </div>
+                <a href="#" class="know">Know More</a>
+            </div>
+    </section>
+    <!-- ----- -->
+
+
+    <!-- contact  -->
+    <section class="contact" id="contact">
+        <div class="content">
+            <div class="text">
+                <h3>Send Us A Message</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis a impedit nulla neque alias temporibus.</p>
+            </div>
+            <div class="contactForm">
+                <form action="mesage.php">
+                    <div class="row100">
+                        <div class="inputBox50">
+                            <input type="text" name="fullname" id="" placeholder="Full Name">
+                        </div>
+                        <div class="inputBox50">
+                            <input type="email" name="fullname" id="" placeholder="Email Adress">
+                        </div>
+                    </div>
+                    <div class="row100">
+                        <div class="inputBox100">
+                            <textarea name="messages" placeholder="Message"></textarea>
+                        </div>
+                    </div>
+                    <div class="row100">
+                        <div class="inputBox100">
+                            <input type="submit" value="Send">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="social">
+                <li><a href="#"><img src="media/icon/linkedin.png" alt=""></a></li>
+                <li><a href="#"><img src="media/icon/instagram.png" alt=""></a></li>
+                <li><a href="#"><img src="media/icon/facebook.png" alt=""></a></li>
+            </div>
+        </div>
+        <p class="copyright">Desgin & Developed By<a href="#">4BGamers</a></p>
+    </section>
+    <!-- ----- -->
+
+
+
+    <!-- script -->
+    <script src="https://unpkg.com/boxicons@2.1.1/dist/boxicons.js"></script>
+    <script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 300,
+            duration: 2000,
+        });
+    </script>
+    <script type="text/javascript">
+        window.addEventListener('scroll',function(){
+            const header = document.querySelector('nav');
+            header.classList.toggle("sticky",window.scrollY > 0);
+        })
+        function toggleMenu(){
+            const menuToggle = document.querySelector('.menuToggle');
+            const navigation = document.querySelector('.navigation');
+            menuToggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+        }
+    </script>
+</body>
+</html>
