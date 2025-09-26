@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="assets/favicon.png" type="media/4btop.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4B GAMERS OFFICIAL</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <nav>
+        <a href="https://4bgamers.fun/" class="logo">
+            <box-icon name='game' type='solid' color='#00FFFF' ></box-icon>4B<span>Gamers</span>
+        </a>
+        <div class="menuToggle" onclick="toggleMenu()">
+        </div>
+        <ul class="navigation">
+            <li><a href="#Home" onclick="toggleMenu()">Home</a></li>
+            <li><a href="#about" onclick="toggleMenu()">About</a></li>
+            <li><a href="#games" onclick="toggleMenu()">Game</a></li>
+            <li><a href="#Servers" onclick="toggleMenu()">Servers</a></li>
+            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+
+        </ul>
+    </nav>
+      <!-- about  -->
+    <section class="about" id="about">
+        <div class="row" data-aos="zoom-out-down">
+            <div class="col50">
+                <!-- <h2 class="title-text"><box-icon name='user-rectangle' type='solid' color='#00ffff' ></box-icon>About <span>Us</span></h2> -->
+                <h2 class="title-text"><lord-icon
+                    src="https://cdn.lordicon.com/nocovwne.json"
+                    trigger="loop"
+                    colors="primary:#00ffff,secondary:#ffffff"
+                    stroke="66"
+                    style="width: 50px;height: 50px;margin-top: -10px;">
+                </lord-icon>About Us Nepal Elite Roleplay <span>[NERP]</span></h2>
+                <p>Welcome to Nepal Elite Roleplay (NERP) — the first and original Nepali theme RP server where culture, creativity, and community come together. We’ve built a world inspired by Nepal’s lifestyle, cities, and people, giving you a true Desi RP experience like never before.
+
+🌟 What We Offer
+
+🏙️ Realistic Nepali-themed environment
+
+🚓 Custom jobs & government roles (police, medic, mechanic, etc.)
+
+🚗 Unique vehicles & local flavor
+
+💼 Business opportunities & gang roleplay
+
+🎉 Active community, events & giveaways
+
+Whether you want to serve the city, start a business, or live the fast life — the choice is yours in Nepal Elite Roleplay.</p>
+            </div>
+            <div class="col50">
+                <div class="imgBx">
+                    <img src="media/dcimage/nerp.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <a href="https://discord.gg/Ttv6HQQGJd" target="_blank" style="
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #5865F2;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+">
+  🚀 Join us today and become part of Nepal’s #1 RP experience!
+</a>
+
+
+
+
+    <!-- contact  -->
+    <section class="contact" id="contact">
+                <div class="social">
+                <li><a href="#"><img src="media/icon/linkedin.png" alt=""></a></li>
+                <li><a href="#"><img src="media/icon/instagram.png" alt=""></a></li>
+                <li><a href="#"><img src="media/icon/facebook.png" alt=""></a></li>
+            </div>
+        </div>
+        <p class="copyright">Desgin & Developed By<a href="#">4BGamers</a></p>
+    </section>
+    <!-- ----- -->
+
+
+
+    <!-- script -->
+    <script src="https://unpkg.com/boxicons@2.1.1/dist/boxicons.js"></script>
+    <script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 300,
+            duration: 2000,
+        });
+    </script>
+    <script type="text/javascript">
+        window.addEventListener('scroll',function(){
+            const header = document.querySelector('nav');
+            header.classList.toggle("sticky",window.scrollY > 0);
+        })
+        function toggleMenu(){
+            const menuToggle = document.querySelector('.menuToggle');
+            const navigation = document.querySelector('.navigation');
+            menuToggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+        }
+    </script>
+</body>
+</html>
