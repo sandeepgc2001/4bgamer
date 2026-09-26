@@ -1,0 +1,14 @@
+{
+  "name": "4B Gamers Official",
+  "short_name": "4B Gamers",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#071015",
+  "theme_color": "#071015",
+  "description": "Gaming, streams, community and entertainment from 4B Gamers Official.",
+  "icons": [
+    {"src": "media/icon-192.png", "sizes": "192x192", "type": "image/png"},
+    {"src": "media/icon-512.png", "sizes": "512x512", "type": "image/png"}
+  ]
+}

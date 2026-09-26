@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="media/favicon.png" type="image/png">
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="4B Gamers Official - gaming, streams, community and entertainment.">
+    <meta name="theme-color" content="#071015">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta property="og:title" content="4B Gamers Official">
+    <meta property="og:description" content="Gaming, streams, community and entertainment from 4B Gamers Official.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="media/Green Bliue Modern Gaming Channel Youtube Banner.png">
+    <link rel="manifest" href="manifest.webmanifest">
+    <title>4B GAMERS OFFICIAL</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <nav>
+        <a href="https://4bgamers.fun/" class="logo">
+            <box-icon name='game' type='solid' color='#00FFFF' ></box-icon>4B<span>Gamers</span>
+        </a>
+        <div class="menuToggle" onclick="toggleMenu()">
+        </div>
+        <ul class="navigation">
+            <li><a href="#Home" onclick="toggleMenu()">Home</a></li>
+            <li><a href="#about" onclick="toggleMenu()">About</a></li>
+            <li><a href="#games" onclick="toggleMenu()">Game</a></li>
+            <li><a href="#Servers" onclick="toggleMenu()">Servers</a></li>
+            <li><a href="#events" onclick="toggleMenu()">Events</a></li>
+            <li><a href="#community" onclick="toggleMenu()">Community</a></li>
+            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+
+        </ul>
+    </nav>
+    <section class="banner" id="Home">
+        <div class="content">
+            <h2>
+                🎮 “Welcome to 4B Gamers Official – Your ultimate hub for gaming, streams, and entertainment.”
+            </h2>
+            <p>“Came from Nepal to bring you non-stop gaming and entertainment – 4B Gamers Official.”</p>
+            <div class="hero-actions">
+                <a class="primary-btn" href="#live">Watch Live</a>
+                <a class="secondary-btn" href="#Servers">Explore Servers</a>
+            </div>
+            <div class="hero-badges" aria-label="4B Gamers highlights">
+                <span>Gaming</span><span>Streaming</span><span>Community</span>
+            </div>
+            <div id="section10" class="demo">
+                <a href="#about"><span></span></a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- community highlights -->
+    <section class="highlights" aria-label="4B Gamers highlights">
+        <div class="highlight-grid">
+            <article class="highlight-card" data-aos="fade-up">
+                <strong>Live & Latest</strong>
+                <span>Watch uploads and community clips in one place.</span>
+                <a href="#live">Watch live</a>
+            </article>
+            <article class="highlight-card" data-aos="fade-up" data-aos-delay="100">
+                <strong>NERP</strong>
+                <span>Enter the Nepal Elite Roleplay community.</span>
+                <a href="nerp.html">Explore NERP</a>
+            </article>
+            <article class="highlight-card" data-aos="fade-up" data-aos-delay="200">
+                <strong>Community</strong>
+                <span>Find servers, events and ways to join 4B Gamers.</span>
+                <a href="#community">Join the community</a>
+            </article>
+        </div>
+    </section>
+
+    <!-- about  -->
+    <section class="about" id="about">
+        <div class="row" data-aos="zoom-out-down">
+            <div class="col50">
+                <!-- <h2 class="title-text"><box-icon name='user-rectangle' type='solid' color='#00ffff' ></box-icon>About <span>Us</span></h2> -->
+                <h2 class="title-text"><lord-icon
+                    src="https://cdn.lordicon.com/nocovwne.json"
+                    trigger="loop"
+                    colors="primary:#00ffff,secondary:#ffffff"
+                    stroke="66"
+                    style="width: 50px;height: 50px;margin-top: -10px;">
+                </lord-icon>About <span>Us</span></h2>
+                <p>*"4B Gamers Official was founded by four brothers with one dream — to bring gaming entertainment to everyone. The name 4B stands for Four Brothers, a symbol of our bond, teamwork, and passion for gaming.
+
+From Nepal to the world, we create exciting content — from action-packed battles to fun streams and community vibes. Gaming isn’t just a hobby for us; it’s our way of connecting, sharing, and inspiring players everywhere.
+
+At 4B Gamers Official, we play together, laugh together, and grow together with our community. Join us on this journey and be part of the family where every game tells a story."*</p>
+            </div>
+            <div class="col50">
+                <div class="imgBx">
+                    <img src="media/4b.webp" alt="4B Gamers Official logo" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ------ -->
+
+<!-- Multi-platform Live Hub -->
+<section id="live" class="live-hub media-section">
+  <div class="title">
+    <h2 class="title-text"><span>🔴</span> Live Streaming Hub</h2>
+    <p>Watch 4B Gamers live across YouTube, Kick, Twitch, TikTok and Facebook.</p>
+  </div>
+
+  <div class="live-platform-tabs" role="tablist" aria-label="Live streaming platforms">
+    <button class="live-tab active" data-platform="youtube" type="button">YouTube</button>
+    <button class="live-tab" data-platform="kick" type="button">Kick</button>
+    <button class="live-tab" data-platform="twitch" type="button">Twitch</button>
+    <button class="live-tab" data-platform="tiktok" type="button">TikTok</button>
+    <button class="live-tab" data-platform="facebook" type="button">Facebook</button>
+  </div>
+
+  <div class="live-layout">
+    <div class="live-player-shell" id="live-player-shell" aria-live="polite">
+      <div class="live-placeholder" id="live-placeholder">
+        <span class="live-dot" aria-hidden="true"></span>
+        <h3 id="live-placeholder-title">Loading YouTube…</h3>
+        <p id="live-placeholder-copy">The live player will appear here when the platform is configured.</p>
+      </div>
+    </div>
+
+    <aside class="live-sidebar">
+      <div class="live-now-card">
+        <span class="live-status-badge">AUTO LIVE</span>
+        <h3 id="live-platform-title">YouTube Live</h3>
+        <p id="live-platform-description">Watch the 4B Gamers YouTube livestream or latest channel content.</p>
+        <a id="live-open-link" class="primary-btn" href="https://www.youtube.com/channel/UCbQ-15fB8g_XfVauygkVSiw" target="_blank" rel="noopener noreferrer">Open YouTube</a>
+      </div>
+      <div class="live-help-card">
+        <strong>One place. Five platforms.</strong>
+        <p>YouTube, Twitch and Kick use their channel players and refresh automatically. Start streaming on the configured channel and the website picks it up without a site update. TikTok/Facebook have platform limitations.</p>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- Latest TikTok clips -->
+<section id="tiktok" class="tiktok media-section">
+  <div class="title">
+    <h2 class="title-text"><span>🎵</span> Latest TikTok Videos</h2>
+    <p>Recent TikTok clips from the community feed.</p>
+  </div>
+  <div id="tiktok-videos" class="video-grid" aria-live="polite">
+    <p class="feed-status">Loading TikTok videos…</p>
+  </div>
+</section>
+
+<script src="live-config.js"></script>
+<script>
+(() => {
+  const config = window.FOUR_B_LIVE || {};
+  const shell = document.getElementById('live-player-shell');
+  const title = document.getElementById('live-platform-title');
+  const description = document.getElementById('live-platform-description');
+  const openLink = document.getElementById('live-open-link');
+  const tabs = [...document.querySelectorAll('.live-tab')];
+
+  const isWeb = location.protocol === 'http:' || location.protocol === 'https:';
+
+  function placeholder(name, message) {
+    shell.replaceChildren();
+    const box = document.createElement('div');
+    box.className = 'live-placeholder';
+    const dot = document.createElement('span');
+    dot.className = 'live-dot';
+    dot.setAttribute('aria-hidden', 'true');
+    const h3 = document.createElement('h3');
+    h3.textContent = name;
+    const p = document.createElement('p');
+    p.textContent = message;
+    box.append(dot, h3, p);
+    shell.appendChild(box);
+  }
+
+  function iframe(src, label, extraAllow='') {
+    shell.replaceChildren();
+    const frame = document.createElement('iframe');
+    frame.src = src;
+    frame.title = label;
+    frame.loading = 'lazy';
+    frame.allowFullscreen = true;
+    frame.referrerPolicy = 'strict-origin-when-cross-origin';
+    frame.allow = `autoplay; fullscreen; picture-in-picture; encrypted-media; ${extraAllow}`;
+    shell.appendChild(frame);
+  }
+
+  function platformUrl(platform) {
+    const item = config[platform] || {};
+    return item.url || '#';
+  }
+
+  function activate(platform) {
+    tabs.forEach(tab => tab.classList.toggle('active', tab.dataset.platform === platform));
+    const item = config[platform] || {};
+    const label = item.label || platform.charAt(0).toUpperCase() + platform.slice(1);
+    title.textContent = `${label} Live`;
+    description.textContent = item.description || `Watch 4B Gamers on ${label}.`;
+    openLink.textContent = `Open ${label}`;
+    openLink.href = item.url || '#';
+    openLink.classList.toggle('is-disabled', !item.url);
+    openLink.setAttribute('aria-disabled', item.url ? 'false' : 'true');
+
+    if (!isWeb) {
+      placeholder(`${label} preview`, 'Live embeds require the site to be opened through GitHub Pages (HTTPS), not directly as a local file.');
+      return;
+    }
+
+    if (platform === 'youtube') {
+      if (!item.channelId) {
+        placeholder('YouTube not configured', 'Add your YouTube channel ID in live-config.js.');
+        return;
+      }
+      const origin = encodeURIComponent(location.origin);
+      iframe(`https://www.youtube.com/embed/live_stream?channel=${encodeURIComponent(item.channelId)}&autoplay=0&origin=${origin}`, '4B Gamers YouTube Live');
+      return;
+    }
+
+    if (platform === 'kick') {
+      if (!item.username) {
+        placeholder('Kick not configured', 'Add your Kick username in live-config.js.');
+        return;
+      }
+      iframe(`https://player.kick.com/${encodeURIComponent(item.username)}?autoplay=false&muted=false`, '4B Gamers Kick Live');
+      return;
+    }
+
+    if (platform === 'twitch') {
+      if (!item.username) {
+        placeholder('Twitch not configured', 'Add your Twitch channel username in live-config.js.');
+        return;
+      }
+      const parent = location.hostname;
+      iframe(`https://player.twitch.tv/?channel=${encodeURIComponent(item.username)}&parent=${encodeURIComponent(parent)}&autoplay=false`, '4B Gamers Twitch Live');
+      return;
+    }
+
+    if (platform === 'facebook') {
+      if (!item.liveVideoUrl) {
+        placeholder('Facebook Live', 'Facebook needs the exact public Live video URL to embed a broadcast. Use the Open Facebook button for the page until a Live URL is configured.');
+        return;
+      }
+      iframe(`https://www.facebook.com/plugins/video.php?href=${encodeURIComponent(item.liveVideoUrl)}&show_text=false&width=1280`, '4B Gamers Facebook Live');
+      return;
+    }
+
+    if (platform === 'tiktok') {
+      placeholder('TikTok LIVE', 'TikTok does not provide the same simple public LIVE iframe as Kick or Twitch. Use the button to open the configured TikTok LIVE/profile page. Latest TikTok clips remain available below.');
+      return;
+    }
+  }
+
+  let activePlatform = 'youtube';
+  let refreshTimer;
+
+  function setActive(platform) {
+    activePlatform = platform;
+    activate(platform);
+  }
+
+  tabs.forEach(tab => tab.addEventListener('click', () => setActive(tab.dataset.platform)));
+  openLink.addEventListener('click', event => {
+    if (openLink.classList.contains('is-disabled')) event.preventDefault();
+  });
+
+  // Keep native channel players fresh. If a stream starts while a visitor already
+  // has the page open, the active YouTube / Twitch / Kick player is reloaded.
+  // This needs no private API key and is safe for GitHub Pages.
+  function startAutoRefresh() {
+    clearInterval(refreshTimer);
+    refreshTimer = setInterval(() => {
+      if (document.hidden) return;
+      if (['youtube', 'twitch', 'kick'].includes(activePlatform)) {
+        activate(activePlatform);
+      }
+    }, 120000); // every 2 minutes
+  }
+
+  document.addEventListener('visibilitychange', () => {
+    if (!document.hidden && ['youtube', 'twitch', 'kick'].includes(activePlatform)) {
+      activate(activePlatform);
+    }
+  });
+
+  setActive('youtube');
+  startAutoRefresh();
+})();
+</script>
+
+<script>
+  // TikTok feed: this depends on the RSS provider allowing browser CORS requests.
+  // All remote values are inserted safely with DOM APIs (no innerHTML).
+  async function loadTikTokVideos() {
+    const container = document.getElementById('tiktok-videos');
+    const rssUrl = 'https://rss.app/feeds/SaY8fyTcIsDkCcUL.xml';
+
+    const showStatus = (message) => {
+      container.replaceChildren();
+      const status = document.createElement('p');
+      status.className = 'feed-status';
+      status.textContent = message;
+      container.appendChild(status);
+    };
+
+    try {
+      const response = await fetch(rssUrl, { mode: 'cors' });
+      if (!response.ok) throw new Error(`RSS request failed: ${response.status}`);
+
+      const xmlText = await response.text();
+      const xmlDoc = new DOMParser().parseFromString(xmlText, 'application/xml');
+      if (xmlDoc.querySelector('parsererror')) throw new Error('Invalid RSS response');
+
+      const items = [...xmlDoc.querySelectorAll('item')].slice(0, 6);
+      if (!items.length) {
+        showStatus('No TikTok videos are available right now.');
+        return;
+      }
+
+      container.replaceChildren();
+      items.forEach((item) => {
+        const linkNode = item.querySelector('link');
+        const titleNode = item.querySelector('title');
+        if (!linkNode) return;
+
+        let videoUrl;
+        try {
+          videoUrl = new URL(linkNode.textContent.trim());
+          if (videoUrl.hostname !== 'www.tiktok.com' && videoUrl.hostname !== 'tiktok.com') return;
+        } catch {
+          return;
+        }
+
+        const parts = videoUrl.pathname.split('/').filter(Boolean);
+        const videoIndex = parts.indexOf('video');
+        const videoId = videoIndex >= 0 ? parts[videoIndex + 1] : '';
+        if (!videoId || !/^\d+$/.test(videoId)) return;
+
+        const box = document.createElement('div');
+        box.className = 'video-box';
+
+        const quote = document.createElement('blockquote');
+        quote.className = 'tiktok-embed';
+        quote.setAttribute('cite', videoUrl.href);
+        quote.dataset.videoId = videoId;
+        quote.appendChild(document.createElement('section'));
+
+        const heading = document.createElement('h3');
+        heading.textContent = titleNode?.textContent?.trim() || 'TikTok video';
+
+        box.append(quote, heading);
+        container.appendChild(box);
+      });
+
+      if (!container.children.length) {
+        showStatus('TikTok videos could not be loaded from the current feed.');
+        return;
+      }
+
+      if (!document.querySelector('script[data-tiktok-embed]')) {
+        const script = document.createElement('script');
+        script.src = 'https://www.tiktok.com/embed.js';
+        script.async = true;
+        script.dataset.tiktokEmbed = 'true';
+        document.body.appendChild(script);
+      }
+    } catch (error) {
+      console.warn('TikTok feed unavailable:', error);
+      showStatus('TikTok videos are temporarily unavailable. Please check back later.');
+    }
+  }
+
+  loadTikTokVideos();
+</script>
+
+    <!-- games -->
+    <section id="games" class="game">
+        <div class="title">
+            <lord-icon
+                src="https://cdn.lordicon.com/ibgjiwvi.json"
+                trigger="loop"
+                colors="primary:#00ffff,secondary:#ffffff"
+                style="width: 50px;height: 50px;">
+            </lord-icon>
+            <h2 class="title-text"><span>G</span>ames</h2>
+            <p>At 4B Gamers Official, we dive into a variety of games to bring you the best entertainment and gameplay experiences. From intense battle royale matches to creative adventures, we play games that challenge, excite, and inspire our community.</p>
+        </div>
+        <div class="content">
+            <div class="box" data-aos="flip-left">
+                <div class="imgBx">
+                    <img src="media/games/bgmi.jpg" alt="PUBG PC" loading="lazy">
+                </div>
+                <div class="text">
+                    <h3>Player Unknown Battleground (PUBG PC)</h3>
+                </div>
+            </div>
+            <div class="box" data-aos="flip-right">
+                <div class="imgBx">
+                    <img src="media/games/cod.jpg" alt="Call of Duty Mobile" loading="lazy">
+                </div>
+                <div class="text">
+                    <h3>Call of Duty: Mobile</h3>
+                </div>
+            </div>
+            <div class="box" data-aos="flip-left">
+                <div class="imgBx">
+                    <img src="media/games/minecraft.jpg" alt="GTA V Roleplay" loading="lazy">
+                </div>
+                <div class="text">
+                    <h3><a href="nerp.html">GTAV ROLEPLAY (NERP)</a></h3>
+                </div>
+            </div>
+            <div class="box" data-aos="flip-right">
+                <div class="imgBx">
+                    <img src="media/games/lords.png" alt="Lords Mobile" loading="lazy">
+                </div>
+                <div class="text">
+                    <h3>Lords Mobile</h3>
+                </div>
+            </div>
+            <div class="box" data-aos="flip-left">
+                <div class="imgBx">
+                    <img src="media/games/pokemon.jpg" alt="Pokémon UNITE" loading="lazy">
+                </div>
+                <div class="text">
+                    <h3>Pokémon UNITE</h3>
+                </div>
+            </div>
+            <div class="box" data-aos="flip-right">
+                <div class="imgBx">
+                    <img src="media/games/freefire.jpg" alt="Garena Free Fire" loading="lazy">
+                </div>
+                <div class="text">
+                    <h3>Garena Free Fire</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ----- -->
+
+    <!-- merchandise  -->
+    <section class="merchandise" id="Servers">
+        <div class="title">
+            <lord-icon
+                src="https://cdn.lordicon.com/ippkhukl.json"
+                trigger="loop"
+                colors="primary:#00ffff,secondary:#ffffff"
+                style="width: 50px;height: 50px;">
+            </lord-icon>
+            <h2 class="title-text">Community <span>Servers</span></h2>
+            <p>Come play with us, make new friends, and level up your gaming experience!</p>
+        </div>
+        <div class="content">
+            <div class="box box-1" data-aos="zoom-out-down">
+                <div class="imgBx">
+                    <img src="media/dcimage/nerp.jpg" alt="Nepal Elite Roleplay" loading="lazy">
+                </div>
+                <div class="text">
+                    <div class="status-line"><span class="status-dot"></span> Featured Roleplay Community</div>
+                    <h3>Nepal Elite ROLEPLAY</h3>
+                    <p>Welcome to Nepal Elite Roleplay (NERP) — the first and original Nepali theme RP server where culture, creativity, 
+                    and community come together. We’ve built a world inspired by Nepal’s lifestyle, cities, and people, giving you a true Nepal
+                    experience like never before.</p>
+                </div>
+                <a href="nerp.html" class="know">Know More</a>
+            </div>
+            <div class="box box-2" data-aos="zoom-out-down">
+                <div class="imgBx">
+                    <img src="media/dcimage/4b.png" alt="4B Gamers Official Discord" loading="lazy">
+                </div>
+                <div class="text">
+                    <div class="status-line"><span class="status-dot status-dot-muted"></span> Invite Coming Soon</div>
+                    <h3>4B Gamers Official Server</h3>
+                    <p>Welcome to the 4B Gamers Official Discord Server — the hub where you can connect directly with me and the entire 4B squad. 
+                        Whether you’re here to game, chat, or just vibe, this is the place to be.
+                        This is more than just a server — it’s a family of gamers where everyone is welcome.</p>
+                </div>
+                <span class="know know-disabled" aria-disabled="true">Coming Soon</span>
+            </div>
+            <div class="box box-3" data-aos="zoom-out-down">
+                <div class="imgBx">
+                    <img src="media/dcimage/silent-warriors-logo.png" alt="Silent Warriors [NPL] logo" loading="lazy">
+                </div>
+                <div class="text">
+                    <div class="status-line"><span class="status-dot"></span> PUBG PC Community · Discord Available</div>
+                    <h3>Silent Warriors [NPL]</h3>
+                    <p>Silent Warriors [NPL] is a PUBG PC Discord server where all Nepali players unite to squad up, share strategies, and enjoy the game together. 
+                    It’s more than just a server — it’s a family of gamers who support each other both in-game and out. Join the Discord from the page for the official invite.</p>
+                </div>
+                <a class="know" href="silent-warriors.html">Explore Silent Warriors</a>
+            </div>
+        </div>
+    </section>
+    <!-- ----- -->
+
+
+
+    <!-- events -->
+    <section class="events" id="events">
+        <div class="title">
+            <h2 class="title-text">Upcoming <span>Events</span></h2>
+            <p>Community activities are announced here. Follow 4B Gamers channels for confirmed times.</p>
+        </div>
+        <div class="event-grid">
+            <article class="event-card" data-aos="fade-up">
+                <div class="event-icon">🎮</div>
+                <div>
+                    <span class="event-label">Community</span>
+                    <h3>Community Game Night</h3>
+                    <p>Squad up with the community across our active games.</p>
+                    <span class="event-date">Schedule: TBA</span>
+                </div>
+            </article>
+            <article class="event-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="event-icon">🏆</div>
+                <div>
+                    <span class="event-label">Competition</span>
+                    <h3>Tournaments & Challenges</h3>
+                    <p>Future competitions, custom rooms and community challenges.</p>
+                    <span class="event-date">Schedule: TBA</span>
+                </div>
+            </article>
+            <article class="event-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="event-icon">📺</div>
+                <div>
+                    <span class="event-label">Content</span>
+                    <h3>Stream & Clip Sessions</h3>
+                    <p>Join future streams and community clip sessions.</p>
+                    <span class="event-date">Schedule: TBA</span>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- community -->
+    <section class="community" id="community">
+        <div class="community-panel" data-aos="zoom-in">
+            <div>
+                <span class="eyebrow">4B GAMERS COMMUNITY</span>
+                <h2>Play. Connect. Grow Together.</h2>
+                <p>Join our gaming community, follow new content, explore NERP and be part of future events.</p>
+                <div class="community-actions">
+                    <a class="primary-btn" href="nerp.html">Explore NERP</a>
+                    <a class="secondary-btn" href="#contact">Contact Us</a>
+                </div>
+            </div>
+            <img src="media/4b.webp" alt="4B Gamers community logo" loading="lazy">
+        </div>
+    </section>
+
+    <!-- team -->
+    <section class="team" id="team">
+        <div class="title">
+            <h2 class="title-text">Meet the <span>Team</span></h2>
+            <p>4B Gamers Official was built by four brothers with one shared passion for gaming and community.</p>
+        </div>
+        <div class="team-grid">
+            <article class="team-card" data-aos="fade-up"><div class="team-avatar">4B</div><h3>Founders</h3><p>Four brothers behind the 4B Gamers vision.</p></article>
+            <article class="team-card" data-aos="fade-up" data-aos-delay="100"><div class="team-avatar">🎥</div><h3>Content</h3><p>Gaming videos, streams, clips and community entertainment.</p></article>
+            <article class="team-card" data-aos="fade-up" data-aos-delay="200"><div class="team-avatar">🛡️</div><h3>Community</h3><p>Server support, events and a welcoming gaming environment.</p></article>
+        </div>
+    </section>
+
+    <!-- contact  -->
+    <section class="contact" id="contact">
+        <div class="content">
+            <div class="text">
+                <h3>Send Us A Message</h3>
+                <p>Have a question or collaboration idea? Send us a message.</p>
+            </div>
+            <div class="contactForm">
+                <form id="contact-form" novalidate>
+                    <div class="row100">
+                        <div class="inputBox50">
+                            <label class="sr-only" for="contact-name">Full name</label>
+                            <input type="text" name="fullname" id="contact-name" placeholder="Full Name" autocomplete="name" required>
+                        </div>
+                        <div class="inputBox50">
+                            <label class="sr-only" for="contact-email">Email address</label>
+                            <input type="email" name="email" id="contact-email" placeholder="Email Address" autocomplete="email" required>
+                        </div>
+                    </div>
+                    <div class="row100">
+                        <div class="inputBox100">
+                            <label class="sr-only" for="contact-message">Message</label>
+                            <textarea id="contact-message" name="messages" placeholder="Message" required></textarea>
+                        </div>
+                    </div>
+                    <div class="row100">
+                        <div class="inputBox100">
+                            <input type="submit" value="Send">
+                        </div>
+                    </div>
+                    <p id="contact-status" class="form-status" role="status"></p>
+                </form>
+            </div>
+            <ul class="social">
+                <li><span class="social-disabled" aria-label="LinkedIn link not configured"><img src="media/icon/linkedin.png" alt="LinkedIn"></span></li>
+                <li><span class="social-disabled" aria-label="Instagram link not configured"><img src="media/icon/instagram.png" alt="Instagram"></span></li>
+                <li><span class="social-disabled" aria-label="Facebook link not configured"><img src="media/icon/facebook.png" alt="Facebook"></span></li>
+            </ul>
+        </div>
+        <div class="site-footer">
+            <div><strong>4B Gamers Official</strong><p>Gaming • Streaming • Community</p></div>
+            <div class="footer-links"><a href="#Home">Home</a><a href="#games">Games</a><a href="#Servers">Servers</a><a href="nerp.html">NERP</a></div>
+        </div>
+        <p class="copyright">© 2026 4B Gamers Official · Designed & Developed by <a href="https://4bgamers.fun/">4B Gamers</a></p>
+    </section>
+    <!-- ----- -->
+
+
+
+    <!-- script -->
+    <script src="https://unpkg.com/boxicons@2.1.1/dist/boxicons.js"></script>
+    <script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 300,
+            duration: 2000,
+        });
+    </script>
+    <script type="text/javascript">
+        window.addEventListener('scroll',function(){
+            const header = document.querySelector('nav');
+            header.classList.toggle("sticky",window.scrollY > 0);
+        })
+        function toggleMenu(){
+            const menuToggle = document.querySelector('.menuToggle');
+            const navigation = document.querySelector('.navigation');
+            menuToggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+        }
+
+        const contactForm = document.getElementById('contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function (event) {
+                event.preventDefault();
+                const status = document.getElementById('contact-status');
+                if (!contactForm.checkValidity()) {
+                    contactForm.reportValidity();
+                    status.textContent = '';
+                    return;
+                }
+                status.textContent = 'Thanks! The website is static, so direct message delivery is not configured yet.';
+            });
+        }
+    </script>
+    <a class="back-to-top" href="#Home" aria-label="Back to top">↑</a>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js').catch(() => {}));
+      }
+    </script>
+</body>
+</html>
+
+
+

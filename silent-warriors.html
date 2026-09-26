@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Silent Warriors [NPL] — a Nepali PUBG PC gaming community featured by 4B Gamers Official.">
+  <meta name="theme-color" content="#10140d">
+  <meta property="og:title" content="Silent Warriors [NPL] | 4B Gamers Official">
+  <meta property="og:description" content="Discover Silent Warriors [NPL], a Nepali PUBG PC gaming community featured by 4B Gamers Official.">
+  <meta property="og:image" content="media/dcimage/silent-warriors-banner.png">
+  <link rel="icon" href="media/favicon.png" type="image/png">
+  <title>Silent Warriors [NPL] | 4B Gamers Official</title>
+  <style>
+    :root{
+      --bg:#090b08;--bg2:#10140d;--card:rgba(22,27,18,.78);--line:rgba(224,188,111,.15);
+      --text:#f6f1e7;--muted:#b8b3a8;--olive:#777a39;--olive2:#9da04d;--orange:#ef9d3d;--gold:#e0bc6f;--red:#d44732;
+      --shadow:0 22px 70px rgba(0,0,0,.42);--radius:24px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.6}
+    a{text-decoration:none;color:inherit}img{max-width:100%;display:block}button,a{-webkit-tap-highlight-color:transparent}
+
+    .site-nav{position:fixed;inset:0 0 auto 0;height:76px;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(18px,5vw,72px);z-index:50;background:linear-gradient(180deg,rgba(8,10,7,.95),rgba(8,10,7,.62));backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.06)}
+    .brand{font-weight:900;font-size:1.4rem;display:flex;align-items:center;gap:10px}.brand-mark{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;background:linear-gradient(135deg,var(--gold),var(--orange));color:#161006;box-shadow:0 0 24px rgba(224,188,111,.2)}.brand span{color:var(--gold)}
+    .nav-links{display:flex;align-items:center;gap:26px;list-style:none;font-weight:800;font-size:.94rem}.nav-links a{color:#ddd7cc;transition:.25s}.nav-links a:hover{color:var(--gold)}.nav-cta{padding:10px 16px;border:1px solid rgba(224,188,111,.35);border-radius:999px;background:rgba(224,188,111,.07)}
+    .menu-btn{display:none;background:none;border:0;color:#fff;font-size:1.8rem;cursor:pointer}
+
+    .hero{min-height:100svh;position:relative;display:grid;grid-template-columns:minmax(0,1.04fr) minmax(360px,.96fr);align-items:center;gap:48px;padding:118px clamp(20px,7vw,110px) 72px;isolation:isolate;overflow:hidden}
+    .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(115deg,rgba(8,10,7,.88),rgba(8,10,7,.8) 40%,rgba(18,8,8,.72) 100%), url('media/dcimage/silent-warriors-banner.png') center/cover no-repeat;z-index:-3}
+    .hero::after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.015) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.015) 1px,transparent 1px),radial-gradient(circle at 76% 36%,rgba(239,157,61,.16),transparent 28%),radial-gradient(circle at 18% 80%,rgba(119,122,57,.18),transparent 34%);background-size:42px 42px,42px 42px,auto,auto;mask-image:linear-gradient(to bottom,transparent 2%,#000 22%,#000 78%,transparent 100%);z-index:-2}
+    .hero-content{max-width:740px}.eyebrow{display:inline-flex;align-items:center;gap:9px;padding:8px 13px;border-radius:999px;border:1px solid rgba(224,188,111,.25);background:rgba(18,21,13,.65);font-size:.76rem;font-weight:900;letter-spacing:.13em;text-transform:uppercase;color:#e9dfcd;margin-bottom:21px}.eyebrow-dot{width:8px;height:8px;border-radius:50%;background:var(--orange);box-shadow:0 0 16px var(--orange)}
+    .hero h1{font-size:clamp(3rem,7vw,6.6rem);line-height:.9;letter-spacing:-.055em;text-transform:uppercase;text-shadow:0 16px 45px rgba(0,0,0,.5)}.hero h1 .accent{display:block;background:linear-gradient(90deg,#fff4dc 0%,var(--gold) 48%,var(--orange) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{max-width:680px;color:#c7c1b6;font-size:clamp(1rem,1.4vw,1.17rem);margin:24px 0 29px}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px}.btn{min-height:50px;padding:0 20px;border-radius:14px;display:inline-flex;align-items:center;justify-content:center;gap:10px;font-weight:900;border:1px solid transparent;transition:.25s}.btn-primary{background:linear-gradient(135deg,var(--gold),var(--orange));color:#1b1206;box-shadow:0 12px 30px rgba(239,157,61,.14)}.btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 38px rgba(239,157,61,.22)}.btn-secondary{background:rgba(15,18,11,.72);border-color:rgba(255,255,255,.14);color:#fff}.btn-secondary:hover{border-color:rgba(224,188,111,.38);transform:translateY(-2px)}.btn-disabled{opacity:.55;cursor:not-allowed}
+    .hero-meta{display:flex;flex-wrap:wrap;gap:16px;margin-top:31px;color:#aaa69c;font-size:.9rem}.hero-meta span{display:flex;align-items:center;gap:8px}.hero-meta i{width:7px;height:7px;border-radius:50%;background:var(--olive2);display:inline-block}
+    .hero-art{position:relative;justify-self:end;width:min(100%,560px)}.art-shell{position:relative;padding:16px;border-radius:34px;background:linear-gradient(145deg,rgba(224,188,111,.22),rgba(119,122,57,.11));border:1px solid rgba(224,188,111,.22);box-shadow:0 35px 90px rgba(0,0,0,.48)}.art-shell::before{content:"";position:absolute;inset:-26px;border-radius:50%;background:radial-gradient(circle,rgba(239,157,61,.13),transparent 65%);z-index:-1;filter:blur(16px)}.art-shell img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:24px}.art-tag{position:absolute;left:28px;right:28px;bottom:26px;padding:14px 16px;border-radius:16px;background:rgba(10,12,8,.82);border:1px solid rgba(224,188,111,.18);backdrop-filter:blur(12px)}.art-tag strong{display:block;font-size:1rem}.art-tag span{font-size:.85rem;color:#bbb4a8}.sw-logo-badge{position:absolute;top:18px;right:18px;width:74px;height:74px;border-radius:18px;background:rgba(8,10,7,.82);border:1px solid rgba(224,188,111,.2);padding:8px;box-shadow:0 12px 24px rgba(0,0,0,.35)}
+
+    .section{padding:92px clamp(20px,7vw,110px)}.section.alt{background:linear-gradient(180deg,#0b0e09,#10140d)}.section-head{max-width:780px;margin-bottom:42px}.kicker{color:var(--gold);font-weight:900;text-transform:uppercase;letter-spacing:.13em;font-size:.78rem}.section h2{font-size:clamp(2rem,4vw,3.45rem);line-height:1.05;letter-spacing:-.035em;margin:8px 0 15px}.section-head p{color:var(--muted);font-size:1.04rem}
+    .glass{background:linear-gradient(180deg,rgba(25,30,20,.84),rgba(15,19,13,.75));border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);backdrop-filter:blur(12px)}
+    .intro-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(320px,.9fr);gap:28px;align-items:stretch}.intro-copy{padding:clamp(26px,4vw,46px)}.intro-copy p{color:#bbb7ad;margin-top:14px}.mini-points{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:26px}.mini-point{padding:15px;border:1px solid rgba(255,255,255,.07);background:rgba(255,255,255,.025);border-radius:16px}.mini-point strong{display:block;margin-bottom:3px}.mini-point span{color:#96938c;font-size:.9rem}.intro-visual{overflow:hidden;min-height:380px;position:relative}.intro-visual img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}.intro-visual::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 38%,rgba(8,10,7,.93))}.visual-label{position:absolute;left:22px;right:22px;bottom:20px;z-index:2;padding:16px 18px;border-radius:16px;background:rgba(9,11,7,.76);border:1px solid rgba(224,188,111,.18);backdrop-filter:blur(10px)}.visual-label strong{display:block}.visual-label span{font-size:.88rem;color:#aaa69d}
+
+    .feature-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}.feature-card{padding:24px;min-height:218px;transition:.25s}.feature-card:hover{transform:translateY(-5px);border-color:rgba(224,188,111,.32)}.feature-icon{width:49px;height:49px;border-radius:14px;display:grid;place-items:center;background:rgba(224,188,111,.08);border:1px solid rgba(224,188,111,.15);font-size:1.35rem;margin-bottom:22px}.feature-card h3{font-size:1.12rem;margin-bottom:8px}.feature-card p{color:#9f9b93;font-size:.93rem}
+
+    .identity-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.identity-card{padding:28px;position:relative;overflow:hidden}.identity-card::after{content:"";position:absolute;width:120px;height:120px;border-radius:50%;background:rgba(239,157,61,.06);right:-35px;top:-35px}.identity-num{font-size:2.8rem;font-weight:950;color:rgba(255,255,255,.07);line-height:1;margin-bottom:15px}.identity-card h3{margin-bottom:8px}.identity-card p{color:#9f9b93;font-size:.94rem}
+
+    .cta-band{margin:0 clamp(20px,7vw,110px) 92px;padding:clamp(28px,5vw,56px);border-radius:30px;position:relative;overflow:hidden;background:linear-gradient(115deg,rgba(18,23,14,.98),rgba(27,24,14,.96));border:1px solid rgba(224,188,111,.24);box-shadow:var(--shadow)}.cta-band::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 87% 18%,rgba(239,157,61,.16),transparent 32%),radial-gradient(circle at 70% 100%,rgba(119,122,57,.18),transparent 38%);pointer-events:none}.cta-content{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:28px}.cta-content h2{font-size:clamp(2rem,4vw,3.35rem);line-height:1.02;letter-spacing:-.035em;margin-bottom:10px}.cta-content p{color:#b2ada3;max-width:680px}.cta-actions{display:flex;flex-wrap:wrap;gap:10px;flex-shrink:0}
+    footer{padding:34px clamp(20px,7vw,110px) 42px;border-top:1px solid rgba(255,255,255,.06);background:#070806;color:#918d84}.footer-row{display:flex;justify-content:space-between;gap:20px;align-items:center;flex-wrap:wrap}.footer-links{display:flex;gap:18px;flex-wrap:wrap}.footer-links a:hover{color:var(--gold)}
+    .reveal{opacity:0;transform:translateY(22px);transition:.7s ease}.reveal.visible{opacity:1;transform:none}
+
+    @media(max-width:1060px){.hero{grid-template-columns:1fr;gap:34px;padding-top:110px}.hero-art{justify-self:start;width:min(100%,560px)}.intro-grid{grid-template-columns:1fr}.feature-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.identity-grid{grid-template-columns:1fr 1fr}.cta-content{align-items:flex-start;flex-direction:column}.cta-actions{flex-shrink:1}}
+    @media(max-width:760px){.site-nav{height:68px}.menu-btn{display:block}.nav-links{position:absolute;top:68px;left:14px;right:14px;display:none;flex-direction:column;align-items:stretch;gap:5px;background:rgba(9,11,7,.98);border:1px solid rgba(255,255,255,.08);padding:13px;border-radius:18px;box-shadow:var(--shadow)}.nav-links.open{display:flex}.nav-links a{display:block;padding:12px 13px;border-radius:10px}.nav-links a:hover{background:rgba(255,255,255,.04)}.hero{min-height:auto;padding-bottom:62px}.hero h1{font-size:clamp(2.8rem,16vw,5rem)}.hero-actions .btn{width:100%}.section{padding-top:72px;padding-bottom:72px}.mini-points,.feature-grid,.identity-grid{grid-template-columns:1fr}.feature-card{min-height:auto}.intro-visual{min-height:300px}.cta-actions{width:100%}.cta-actions .btn{width:100%}}
+    @media(max-width:430px){.section{padding-left:16px;padding-right:16px}.cta-band{margin-left:16px;margin-right:16px}.brand{font-size:1.15rem}.art-shell{padding:9px;border-radius:26px}.art-shell img{border-radius:19px}.art-tag{left:18px;right:18px;bottom:18px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.btn,.feature-card{transition:none}}
+  </style>
+</head>
+<body>
+  <nav class="site-nav" aria-label="Main navigation">
+    <a class="brand" href="index.html#Home" aria-label="4B Gamers home"><span class="brand-mark">4B</span> 4B <span>Gamers</span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html#Home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#community">Community</a></li>
+      <li><a class="nav-cta" href="index.html#Servers">4B Servers</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="hero-content">
+      <div class="eyebrow"><span class="eyebrow-dot"></span> Nepali PUBG PC Community</div>
+      <h1>Silent Warriors <span class="accent">[NPL]</span></h1>
+      <p>A home for Nepali PUBG PC players to squad up, communicate, improve together and enjoy battle royale as one gaming community. Now updated with the official Silent Warriors banner, logo and Discord server.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://discord.gg/c94G47daP8" target="_blank" rel="noopener noreferrer">Join Silent Warriors Discord</a>
+        <a class="btn btn-secondary" href="#community">Explore Community</a>
+        <a class="btn btn-secondary" href="index.html#Servers">Back to 4B Servers</a>
+      </div>
+      <div class="hero-meta">
+        <span><i></i> PUBG PC</span><span><i></i> Nepali Players</span><span><i></i> Squad & Community Focused</span>
+      </div>
+    </div>
+    <div class="hero-art reveal">
+      <div class="art-shell">
+        <img src="media/dcimage/silent-warriors-banner.png" alt="Silent Warriors banner artwork">
+        <img class="sw-logo-badge" src="media/dcimage/silent-warriors-logo.png" alt="Silent Warriors logo">
+        <div class="art-tag"><strong>Official Silent Warriors Banner</strong><span>Battle royale. Teamwork. Nepal.</span></div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" id="about">
+      <div class="section-head reveal">
+        <span class="kicker">Silent Warriors × 4B Gamers</span>
+        <h2>Built around squads, strategy and Nepali gamers.</h2>
+        <p>Silent Warriors [NPL] is featured inside the 4B Gamers community as a dedicated space for PUBG PC players who want teammates, communication and a stronger shared gaming experience.</p>
+      </div>
+      <div class="intro-grid">
+        <article class="glass intro-copy reveal">
+          <span class="kicker">About Silent Warriors</span>
+          <h2 style="font-size:clamp(1.8rem,3vw,2.7rem);margin-top:8px">More than finding a squad.</h2>
+          <p>The community brings Nepali PUBG PC players together to team up, share strategies and enjoy matches with people who speak the same language and understand the same gaming culture.</p>
+          <p>The goal is simple: make it easier to find players, build teamwork and create a friendly place around competitive battle royale.</p>
+          <div class="mini-points">
+            <div class="mini-point"><strong>Squad Up</strong><span>Connect with other Nepali PUBG PC players.</span></div>
+            <div class="mini-point"><strong>Share Strategy</strong><span>Learn rotations, positioning and team play together.</span></div>
+            <div class="mini-point"><strong>Community First</strong><span>A shared space for gaming, chat and support.</span></div>
+            <div class="mini-point"><strong>4B Featured</strong><span>Connected directly to the wider 4B Gamers community.</span><div class="mini-point"><strong>Join Discord</strong><span>Use the official invite to jump straight into the community.</span></div>
+          </div>
+        </article>
+        <div class="glass intro-visual reveal">
+          <img src="media/dcimage/silent-warriors-banner.png" alt="Silent Warriors banner artwork" loading="lazy">
+          <div class="visual-label"><strong>Silent Warriors [NPL]</strong><span>Official banner supplied for the community page and bundled locally for reliability.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="community">
+      <div class="section-head reveal">
+        <span class="kicker">Community Highlights</span>
+        <h2>Everything is about better games together.</h2>
+        <p>The page now uses the official Silent Warriors visuals and confirmed Discord server while keeping the rest of the content simple and community-focused.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="glass feature-card reveal"><div class="feature-icon">🎯</div><h3>PUBG PC Focus</h3><p>A community centered around PUBG PC squads, communication and battle royale gameplay.</p></article>
+        <article class="glass feature-card reveal"><div class="feature-icon">🇳🇵</div><h3>Nepali Community</h3><p>A place for Nepali players to connect naturally and build stronger in-game teamwork.</p></article>
+        <article class="glass feature-card reveal"><div class="feature-icon">🛡️</div><h3>Team Play</h3><p>Squad-oriented gaming where coordination, support and shared improvement matter.</p></article>
+        <article class="glass feature-card reveal"><div class="feature-icon">🎮</div><h3>Gaming Family</h3><p>More than matchmaking — a community for people who enjoy playing and spending time together.</p></article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head reveal">
+        <span class="kicker">Silent Warriors Identity</span>
+        <h2>Three things define the community.</h2>
+      </div>
+      <div class="identity-grid">
+        <article class="glass identity-card reveal"><div class="identity-num">01</div><h3>Play Together</h3><p>Find people to join matches with instead of dropping into every battle alone.</p></article>
+        <article class="glass identity-card reveal"><div class="identity-num">02</div><h3>Improve Together</h3><p>Share knowledge, tactics and match experience with your regular teammates.</p></article>
+        <article class="glass identity-card reveal"><div class="identity-num">03</div><h3>Represent Nepal</h3><p>Build a recognizable Nepali gaming community around teamwork and battle royale.</p></article>
+      </div>
+    </section>
+
+    <section class="cta-band reveal" aria-label="Silent Warriors links">
+      <div class="cta-content">
+        <div><span class="kicker">Ready to squad up?</span><h2>Enter the Silent Warriors community.</h2><p>The dedicated community page is now live and connected to the confirmed Silent Warriors Discord server.</p></div>
+        <div class="cta-actions"><a class="btn btn-primary" href="https://discord.gg/c94G47daP8" target="_blank" rel="noopener noreferrer">Open Discord Server</a><a class="btn btn-secondary" href="index.html#Servers">Explore 4B Servers</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-row"><div>© 2026 4B Gamers Official · Silent Warriors [NPL]</div><div class="footer-links"><a href="index.html">4B Gamers</a><a href="nerp.html">NERP</a><a href="https://discord.gg/c94G47daP8" target="_blank" rel="noopener noreferrer">Discord</a><a href="#top">Back to top</a></div></div>
+  </footer>
+
+  <script>
+    const menuBtn=document.getElementById('menuBtn'),navLinks=document.getElementById('navLinks');
+    menuBtn.addEventListener('click',()=>{const open=navLinks.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open));menuBtn.textContent=open?'✕':'☰'});
+    navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navLinks.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');menuBtn.textContent='☰'}));
+    const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}}),{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+  </script>
+</body>
+</html>
