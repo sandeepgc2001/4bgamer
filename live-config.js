@@ -22,12 +22,12 @@ window.FOUR_B_LIVE = {
   },
   tiktok: {
     label: 'TikTok',
-    url: '',      // Example: https://www.tiktok.com/@4bgamersofficial/live
+    url: 'https://www.tiktok.com/@4bgamersyt',      // Example: https://www.tiktok.com/@4bgamersofficial/live
     description: 'Open the 4B Gamers TikTok LIVE/profile page.'
   },
   facebook: {
     label: 'Facebook',
-    url: '',          // Your Facebook page/profile URL
+    url: 'https://www.facebook.com/4bgamersofficial',          // Your Facebook page/profile URL
     liveVideoUrl: '', // Paste the exact public Facebook Live video URL while live
     description: 'Watch 4B Gamers live on Facebook.'
   }
