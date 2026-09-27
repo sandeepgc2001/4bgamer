@@ -22,7 +22,7 @@ window.FOUR_B_LIVE = {
   },
   tiktok: {
     label: 'TikTok',
-    url: 'https://www.tiktok.com/@4bgamersyt',      // Example: https://www.tiktok.com/@4bgamersofficial/live
+    url: 'https://www.tiktok.com/@4bgamersyt/live',      // Example: https://www.tiktok.com/@4bgamersofficial/live
     description: 'Open the 4B Gamers TikTok LIVE/profile page.'
   },
   facebook: {
